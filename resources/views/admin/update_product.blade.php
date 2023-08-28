@@ -83,7 +83,7 @@ label{
 
             <div class="div_design">
             <label>Change Product Image : </label>
-        <input type="file" name="image" required=""value="{{$product->image}}">
+        <input type="file" name="image" value="{{$product->image}}">
             </div>
 
             <div class="div_design">
