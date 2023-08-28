@@ -65,8 +65,8 @@ class AdminController extends Controller
     }
 
     public function update_product($id){
-        $product=product::find($id);
-        $catagory=catagory::all();
-        return view('admin.update_product',compact('product','catagory'));
+        $product = Product::find($id);
+        $categories = Catagory::all(); // Fetch categories to populate the dropdown
+        return view('admin.update_product', compact('product', 'categories'));
     }
 }

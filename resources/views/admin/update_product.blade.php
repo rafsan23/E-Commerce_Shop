@@ -89,9 +89,10 @@ label{
             <div class="div_design">
     <label>Product Category: </label>
     <select class="text_color" name="category" required="">
-        <option  value="{{$product->catagory_name}}" selected="{{$product->catagory_name}}">Add a category here</option> 
-        
-      
+        <option value="" selected="">Add a category here</option> 
+        @foreach($categories as $category)
+            <option value="{{$category->catagory_name}}">{{$category->catagory_name}}</option>  
+        @endforeach
     </select>
 </div>
 
