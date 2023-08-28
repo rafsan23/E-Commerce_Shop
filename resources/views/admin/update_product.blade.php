@@ -52,8 +52,8 @@ label{
           @endif
 
         <div class="div_center">
-            <h1 class="font_size">Add Product</h1>
-            <form action="{{url('/add_product')}}" method="POST" enctype="multipart/form-data">
+            <h1 class="font_size">Update Product</h1>
+            <form action="{{url('/update_product_confirm',$product->id)}}" method="POST" enctype="multipart/form-data">
                 @csrf
 
             <div class="div_design">

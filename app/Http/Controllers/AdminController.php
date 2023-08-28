@@ -42,7 +42,8 @@ class AdminController extends Controller
         $product->name = $request->name;
         $product->price = $request->price;
         $product->discount_price = $request->discount_price;
-        $product->catagory_name = $request->catagory_name;
+        $product->catagory_name = $request->category;
+        
 
         $image = $request->image;
         $imageName = time() . '.' . $image->getClientOriginalExtension();
@@ -68,5 +69,23 @@ class AdminController extends Controller
         $product = Product::find($id);
         $categories = Catagory::all(); // Fetch categories to populate the dropdown
         return view('admin.update_product', compact('product', 'categories'));
+    }
+
+    public function update_product_confirm(Request $request,$id){
+        $product=product::find($id);
+        $product->code=$request->code;
+        $product->name=$request->name;
+        $image=$request->image;
+        $imagename=time().'.'.$image->getClientOriginalExtension();
+        $request->image->move('product',$imagename);
+        $product->image=$imagename;
+        $product->save();
+        return redirect()->back();
+
+        $product->catagory_name=$request->category;
+        $product->price=$request->price;
+        $product->discount_price=$request->discount_price;
+        
+
     }
 }
