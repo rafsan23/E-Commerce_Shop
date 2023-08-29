@@ -6,14 +6,14 @@
                </h2>
             </div>
             <div class="row">
-            @foreach($product as $product)
+            @foreach($product as $products)
 
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
                            <a href="" class="option1">
-                           Men's Shirt
+                           {{$products->name}}
                            </a>
                            <a href="" class="option2">
                            Buy Now
@@ -21,24 +21,24 @@
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="product/{{$product->image}}" alt="">
+                        <img src="product/{{$products->image}}" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
-                           {{$product->name}}
+                           {{$products->name}}
                         </h5>
-                        @if($product->discount_price!=null)
+                        @if($products->discount_price!=null)
                         <h6 style="color: red;" >
                           Discount price
                           <br>
-                           TK{{$product->discount_price}}
+                           TK{{$products->discount_price}}
                         </h6>
 
 
                         <h6 style="text-decoration: line-through; color:blue">
                         Price
                         <br>
-                           TK{{$product->price}}
+                           TK{{$products->price}}
                         </h6>
 
                         @else
@@ -46,7 +46,7 @@
                         <h6 style="color: blue;">
                         Price
                         <br>
-                           TK{{$product->price}}
+                           TK{{$products->price}}
                         </h6>
                          
                         @endif
@@ -57,5 +57,7 @@
                </div>
               
            @endforeach
+   {!!$product->withQueryString()->links('pagination::bootstrap-5')!!}
+
          </div>
       </section>

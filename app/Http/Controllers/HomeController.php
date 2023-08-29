@@ -15,7 +15,7 @@ class HomeController extends Controller
         if (Auth::check()) {
             return $this->redirect();
         } else {
-            $product=Product::all();
+            $product=Product::paginate(3);
             return view('home.userpage',compact('product'));
         }
     }
