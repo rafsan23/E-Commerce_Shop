@@ -5,22 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Product;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        // Check if user is authenticated
+        
         if (Auth::check()) {
             return $this->redirect();
         } else {
-            return view('home.userpage');
+            $product=Product::all();
+            return view('home.userpage',compact('product'));
         }
     }
 
     public function redirect()
     {
-        // Check if user is authenticated
+       
         if (Auth::check()) {
             $usertype = Auth::user()->usertype;
 
@@ -31,7 +33,7 @@ class HomeController extends Controller
             }
         } else {
             // User is not authenticated, handle accordingly
-            return redirect()->route('login'); // Redirect to login page or handle as needed
+            return redirect()->route('login'); 
         }
     }
 }
