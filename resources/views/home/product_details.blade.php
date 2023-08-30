@@ -2,6 +2,7 @@
 <html>
    <head>
       <!-- Basic -->
+      <base href="/public">
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <!-- Mobile Metas -->
@@ -10,8 +11,8 @@
       <meta name="keywords" content="" />
       <meta name="description" content="" />
       <meta name="author" content="" />
-      <link rel="shortcut icon" href="images/header.png" type="">
-      <title>E-lectronix Shop</title>
+      <link rel="shortcut icon" href="images/favicon.png" type="">
+      <title>Famms - Fashion HTML Template</title>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="home/css/bootstrap.css" />
       <!-- font awesome style -->
@@ -26,28 +27,49 @@
          <!-- header section strats -->
          @include('home.header')
                <!-- end header section -->
-         <!-- slider section -->
-         @include('home.slider')
-         <!-- end slider section -->
-      </div>
-      <!-- why section -->
-      @include('home.why')
-      <!-- end why section -->
+        
       
-      <!-- arrival section -->
-      @include('home.arrival')
-      <!-- end arrival section -->
-      
-      <!-- product section -->
-      @include('home.product')
-      <!-- end product section -->
+      <div class="col-sm-6 col-md-4 col-lg-4" style="margin: auto;width:50%; padding:30px">
+                 
+                     <div class="img-box" style="padding: 20px;">
+                        <img src="product/{{$product->image}}" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           {{$product->name}}
+                        </h5>
 
-      <!-- subscribe section -->
-      @include('home.subscribe')
-      <!-- end subscribe section -->
-      <!-- client section -->
-      @include('home.client')
-      <!-- end client section -->
+                        <h6>Product Code : {{$product->code}}</h6> 
+                        @if($product->discount_price!=null)
+                        <h6 style="color: red;" >
+                          Discount price
+                          <br>
+                           TK{{$product->discount_price}}
+                        </h6>
+
+
+                        <h6 style="text-decoration: line-through; color:blue">
+                        Price
+                        <br>
+                           TK{{$product->price}}
+                        </h6>
+
+                        @else
+
+                        <h6 style="color: blue;">
+                        Price
+                        <br>
+                           TK{{$product->price}}
+                        </h6>
+                         
+                        @endif
+                    <h6>Product Name : {{$product->catagory_name}}</h6> 
+                      
+                       <a href="" class="btn btn-primary">Add to cart</a>
+                     </div>
+                  </div>
+               </div>
+     
       <!-- footer start -->
       @include('home.footer')
       <!-- footer end -->

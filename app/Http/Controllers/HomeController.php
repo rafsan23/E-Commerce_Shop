@@ -15,7 +15,7 @@ class HomeController extends Controller
         if (Auth::check()) {
             return $this->redirect();
         } else {
-            $product=Product::paginate(3);
+            $product=Product::paginate(10);
             return view('home.userpage',compact('product'));
         }
     }
@@ -29,12 +29,19 @@ class HomeController extends Controller
             if ($usertype == '1') {
                 return view('admin.home');
             } else {
-                return view('home.userpage');
+                $product=Product::paginate(10);
+                return view('home.userpage',compact('product'));
             }
         } else {
-            // User is not authenticated, handle accordingly
+     
             return redirect()->route('login'); 
         }
+    }
+
+    public function product_details($id){
+        $product=product::find($id);
+
+        return view('home.product_details',compact('product'));
     }
 }
 
