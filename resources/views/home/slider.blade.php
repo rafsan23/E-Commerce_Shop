@@ -14,10 +14,10 @@
                                     Sale 20% Off
                                     </span>
                                     <br>
-                                    On Everything
+                                    On Laptop
                                  </h1>
                                  <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                 Upgrade Your Tech: Get 20% Off on All Laptops! Elevate your digital experience with E-lectronix. Browse a diverse range of laptops from leading brands. Limited-time offer, shop now!
                                  </p>
                                  <div class="btn-box">
                                     <a href="" class="btn1">
@@ -36,13 +36,13 @@
                               <div class="detail-box">
                                  <h1>
                                     <span>
-                                    Sale 20% Off
+                                    Sale 10% Off
                                     </span>
                                     <br>
-                                    On Everything
+                                    On Mobile
                                  </h1>
                                  <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                 Mobile Mania Sale: Grab Your Favorite Smartphone with 10% Off! Explore our premium mobile collection and enjoy exclusive savings at E-lectronix. Stay connected in style – shop now!
                                  </p>
                                  <div class="btn-box">
                                     <a href="" class="btn1">
@@ -61,13 +61,13 @@
                               <div class="detail-box">
                                  <h1>
                                     <span>
-                                    Sale 20% Off
+                                    Sale 30% Off
                                     </span>
                                     <br>
-                                    On Everything
+                                    On Earbuds
                                  </h1>
                                  <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                 Unplug and Play: 30% Off on Earbuds! Dive into pure sound bliss with our premium earbud collection at E-lectronix. Limited time offer, shop now and enjoy the groove!
                                  </p>
                                  <div class="btn-box">
                                     <a href="" class="btn1">
