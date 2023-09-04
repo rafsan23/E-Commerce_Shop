@@ -65,7 +65,17 @@
                         @endif
                     <h6>Product Name : {{$product->catagory_name}}</h6> 
                       
-                       <a href="" class="btn btn-primary">Add to cart</a>
+                    <form action="{{ url('add_cart', $product->id) }}" method="POST">
+               @csrf
+               <div class="row">
+                  <div class="col-md-4">
+                     <input type="number" name="quantity" value="1" min="1" style="width: 100px;">
+                  </div>
+                  <div class="col-md-4">
+                     <input type="submit" value="Add to Cart">
+                  </div>
+               </div>
+            </form>
                      </div>
                   </div>
                </div>
