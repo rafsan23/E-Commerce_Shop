@@ -59,9 +59,10 @@
 
 @endforeach
 
-<span style="padding-top: 20px;">
-   {!! $products->withQueryString()->links('pagination::bootstrap-5') !!}
+<span style="display: flex; justify-content: center; margin-top: 20px;">
+    {!! $products->withQueryString()->links('pagination::bootstrap-5') !!}
 </span>
+
 
          </div>
       </section>

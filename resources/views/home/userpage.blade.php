@@ -20,6 +20,7 @@
       <link href="home/css/style.css" rel="stylesheet" />
       <!-- responsive style -->
       <link href="home/css/responsive.css" rel="stylesheet" />
+      
    </head>
    <body>
       <div class="hero_area">
@@ -46,7 +47,7 @@
       @include('home.subscribe')
       <!-- end subscribe section -->
       <!-- client section -->
-      @include('home.client')
+    
       <!-- end client section -->
       <!-- footer start -->
       @include('home.footer')

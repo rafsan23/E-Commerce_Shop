@@ -16,7 +16,7 @@ class HomeController extends Controller
         if (Auth::check()) {
             return $this->redirect();
         } else {
-            $products = Product::paginate(9);
+            $products = Product::paginate(12);
             return view('home.userpage', compact('products'));
         }
     }
@@ -46,7 +46,7 @@ class HomeController extends Controller
 
                 return view('admin.home',compact('total_product','total_order','total_user','total_revenue','total_delivered','total_processing'));
             } else {
-                $products = Product::paginate(10);
+                $products = Product::paginate(12);
                 return view('home.userpage', compact('products'));
             }
         } else {
